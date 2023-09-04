@@ -48,6 +48,6 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return $this->formatResponse(code: 204, message: 'Deleted');
+        return $this->formatResponse(message: 'Deleted');
     }
 }
