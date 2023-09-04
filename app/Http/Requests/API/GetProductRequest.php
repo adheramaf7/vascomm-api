@@ -11,7 +11,7 @@ class GetProductRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class GetProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'take'   => ['nullable', 'numeric',],
+            'skip'   => ['nullable', 'numeric',],
+            'search' => ['nullable', 'string'],
         ];
     }
 }

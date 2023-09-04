@@ -32,7 +32,7 @@ class LoginController extends Controller
 
         $data = [
             'token' => $token,
-            'user'  => UserResource::make($user)->toArray($request),
+            'user'  => UserResource::make($user),
         ];
 
         return $this->formatResponse(message: 'Login Success', data: $data);
